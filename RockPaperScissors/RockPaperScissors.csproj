@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="soundtrack\**" />
+    <EmbeddedResource Remove="soundtrack\**" />
+    <None Remove="soundtrack\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Super Mario Bros. 2 Overworld Theme.mp3" />
+    <None Remove="Super Mario Bros. 2 Overworld Theme.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Super Mario Bros. 2 Overworld Theme.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
